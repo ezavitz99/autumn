@@ -1,28 +1,8 @@
 <!-- Copyright (c) 2020 8th Wall, Inc. -->
-<!-- body.html is optional; elements will be added to your html body after app.js is loaded. -->
-<div class="prompt"><span id="text">Tap to Place<br>Hologram</span></div>
-<h2>8th Wall - Depthkit - A-Frame</h2>
-<a-scene
-  xrextras-tap-recenter
-  xrextras-almost-there
-  xrextras-loading
-  xrextras-runtime-error
-  xrweb>
-  <a-camera position="0 2 2"></a-camera>
-  <a-entity 
-    id="depthkitEntity" 
-    position="0 1.18 0"
-    scale="1.25 1.25 -1.25"
-    depthkit="capture: autumn; loop: true; opacity: 0.0;">
-  </a-entity>
-  
-  <a-circle
-    id="shadow"
-    visible="false"
-    rotation="-90 45 0"
-    scale="1 0.8 1"
-    src="./assets/shadow.png"
-    opacity="0.4">
-  </a-circle>
-  
-</a-scene>
+<!-- head.html is optional; elements will be added to your html head before app.js is loaded. -->
+<!-- Use "8thwall:" meta tags to hook into 8th Wall's build process and developer tools. -->
+<meta name="8thwall:renderer" content="aframe:1.1.0">
+<meta name="8thwall:package" content="@8thwall.xrextras">
+<!-- Other external scripts and meta tags can also be added. -->
+<script crossorigin="anonymous" src="//cdn.8thwall.com/web/aframe/depthkit-1.0.0.min.js"></script>
+<script async src="//apps.8thwall.com/xrweb?appKey=h7Y4wNX1pDwoflr37QWOrawQ7iwuhvIe9wMNGSc7AdDFTdwJkfsyP5ZlyIGmw5IwvBlVPJ"></script>
