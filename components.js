@@ -33,8 +33,8 @@ const {Depthkit} = window
     } else {
       this.el.setAttribute('rotation', '0 0 0')
     }
-    this.character.load(require(`./capture-data/${this.data.capture}.txt`),
-      require(`./assets/captures/${this.data.capture}.mp4`), depthkitLoadedCallback)
+    this.character.load(require(`./capture-data/autumn.txt`),
+      require(`./assets/captures/autumn.mp4`), depthkitLoadedCallback)
     dkMesh.add(this.character)
   },
   depthkitLoaded() {
