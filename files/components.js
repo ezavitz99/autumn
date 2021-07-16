@@ -1,5 +1,7 @@
 const {Depthkit} = window
-const depthkitComponent = {
+// const depthkitComponent = {
+  AFRAME.registerComponent('depthkit', {
+
   schema: {
     capture: {type: 'string', default: 'John'},
     loop: {type: 'boolean', default: false},
@@ -68,6 +70,6 @@ const depthkitComponent = {
   },
   remove() {
     this.el.removeObject3D('mesh')
-  },
-}
-export {depthkitComponent}
+  }
+  })
+// export {depthkitComponent}
